@@ -1,8 +1,12 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 
-const HomeLink = (mainT) => {
+const HomeLink = (mainT,locale) => {
     return(
-        <h2 className="text-white normaltext p-0 m-0">{mainT("dnportfolio")}</h2>
+        <NavLink activeClassName={"active"}
+           className={""}
+           exact to={"/"+locale}><h2 className="App-brand navmaintext p-0 m-0">{mainT("dnportfolio")}</h2></NavLink>
+
     )
 }
 

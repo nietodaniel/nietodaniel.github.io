@@ -24,7 +24,7 @@ class NavbarTop extends React.Component {
       lowerMenusWidth = 4
       preZone= <>
         <div className="col-9 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
-          {HomeLink(this.props.mainT)}
+          {HomeLink(this.props.mainT,this.props.locale)}
         </div>
         <div className="col-3 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
           {LangMenu(menuClassName, this.props.locale, this.props.i18n, this.props.path)}
@@ -32,7 +32,7 @@ class NavbarTop extends React.Component {
       </>
     } else {
       preZone= <div className="col-4 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
-        {HomeLink(this.props.mainT)}
+        {HomeLink(this.props.mainT,this.props.locale)}
       </div>
       postZone = <div className="col-2 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
         {LangMenu(menuClassName, this.props.locale, this.props.i18n, this.props.path)}

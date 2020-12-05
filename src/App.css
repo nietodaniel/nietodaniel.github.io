@@ -227,7 +227,7 @@ a.span:hover {
 }
 
 .iconlink i:hover{
-  color: #1858d0;
+  color: #b5cddc;
   transform:scale(1.1,1.1);
   transform-origin:-0.05 -0.05;
 }
@@ -483,6 +483,21 @@ pointer-events: none
   transform-origin:-0.05 -0.05;
 }
 
+.navmaintext{
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.App-brand.navmaintext {
+  color: white;
+}
+
+.App-brand.navmaintext:hover {
+  color: #b5cddc
+}
+
+
 .App-brand:hover > h6 {
   text-decoration:underline;
   text-decoration-color:#1858d0;
@@ -545,8 +560,3 @@ pointer-events: none
   transform-origin:-0.05 -0.05;
 }
 
-.normaltext{
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.8;
-}
