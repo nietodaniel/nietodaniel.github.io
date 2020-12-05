@@ -188,8 +188,17 @@ hr { display: block; height: 3px;
   text-decoration-color:#b5cddc;
 }
 
+.dropdown-item-hover.dropdown-item-hover{
+  color:white;
+}
+
+.dropdown-item-hover.dropdown-item-hover:hover{
+  text-decoration:underline;
+  text-decoration-color:#b5cddc;
+}
+
 .btn.Appbackgroundcolor{
-  background-color:#d05218;
+  background-color:#c94000;
 }
 
 a.span:hover {

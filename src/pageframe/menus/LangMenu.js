@@ -1,6 +1,6 @@
 import React from 'react';
 import MainDropDownMenu from '../../components/menus/MainDropDownMenu';
-import DropdownNavLink from '../../components/menus/DropdownNavLink';
+import {Dropdown} from 'react-bootstrap'
 
 const LangMenu = (menuClassName,locale,i18n,path) => {
     const changeLanguage = lng => {
@@ -23,7 +23,7 @@ const LangMenu = (menuClassName,locale,i18n,path) => {
     const linkTextClassName="small";
  
     const content = <>
-    <DropdownNavLink  route={"/experience"} onClick={() => changeLanguage(langs[0])} name={langNames[0]} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
+      <Dropdown.Item className={NavClassName} onClick={() => changeLanguage(langs[0])}><span className={linkTextClassName}>{langNames[0]}</span></Dropdown.Item>
     </>
 
     return(
