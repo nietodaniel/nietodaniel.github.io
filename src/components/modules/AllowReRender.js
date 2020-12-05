@@ -31,4 +31,10 @@ export const AllowReRenderContent = (nextProps, currentProps) => {
   return false; 
 }
 
-
+export const AllowReRenderHelmet = (nextProps, currentProps) => {
+  console.log("evaluating helmet")
+  if(nextProps.locale!==currentProps.locale){
+    return true;
+  }
+  return false; 
+}
