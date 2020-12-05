@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import ENapps from './locales/en/apps.json';
+import ENappsComingSoon from './locales/en/appsComingSoon.json';
 import ENeducation from './locales/en/education.json';
 import ENentrepreneurships from './locales/en/entrepreneurships.json';
 import ENexperience from './locales/en/experience.json';
@@ -11,6 +12,7 @@ import ENprojects from './locales/en/projects.json';
 import ENrepositories from './locales/en/repositories.json';
 import ENstory from './locales/en/story.json';
 import ESapps from './locales/es/apps.json';
+import ESappsComingSoon from './locales/es/appsComingSoon.json';
 import ESeducation from './locales/es/education.json';
 import ESentrepreneurships from './locales/es/entrepreneurships.json';
 import ESexperience from './locales/es/experience.json';
@@ -18,6 +20,8 @@ import EShome from './locales/es/home.json';
 import ESprojects from './locales/es/projects.json';
 import ESrepositories from './locales/es/repositories.json';
 import ESstory from './locales/es/story.json';
+import ESmain from './locales/es/main.json';
+import ENmain from './locales/en/main.json';
 
 // don't want to use this?
 // have a look at the Quick start guide
@@ -71,23 +75,27 @@ i18n
     resources: {
       en: {
         apps: ENapps,
+        appsComingSoon: ENappsComingSoon,
         education: ENeducation,
         entrepreneurships: ENentrepreneurships,
         experience: ENexperience,
         home: ENhome,
         projects: ENprojects,
         repositories: ENrepositories,
-        story: ENstory
+        story: ENstory,
+        main: ENmain
       },
       es: {
         apps: ESapps,
+        appsComingSoon: ESappsComingSoon,
         education: ESeducation,
         entrepreneurships: ESentrepreneurships,
         experience: ESexperience,
         home: EShome,
         projects: ESprojects,
         repositories: ESrepositories,
-        story: ESstory
+        story: ESstory,
+        main: ESmain
       }
     },
   });

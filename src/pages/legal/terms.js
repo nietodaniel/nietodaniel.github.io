@@ -1,12 +1,12 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const apps = ({t}) => { 
+const terms = ({t}) => { 
   return (
     <div>
-        apps works!
+        terms works!
     </div>
   )
 }
 
-export default withTranslation(['apps'])(apps);
+export default withTranslation(['terms'])(terms);

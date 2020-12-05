@@ -56,6 +56,7 @@ class AppRouter extends React.Component {
     const w= window.screen.width;
     const h = window.screen.height;
     const orientation = h<w;
+
     return (
       <div id="main-container">
         <Router>
