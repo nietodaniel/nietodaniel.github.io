@@ -4,7 +4,6 @@ import Logoicon from '../../components/commons/Logoicon'
 const AppIcon = (locale) => {
   return (
     <a
-      activeClassName="active"
       className="App-brand text-center small m-0 p-0 pl-2"
       href="http://www.digitalmedtools.com"
     >

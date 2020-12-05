@@ -19,21 +19,8 @@ class PageFrame extends React.Component {
   render() { 
     const {path,locale} = GetLocaleAndPath(this.props.i18n)
 
-    console.log("this.props.i18n")
-    console.log(this.props.i18n)
-
     const mainT = (word) => this.props.i18n.t('main:' + word);
-
-    console.log("mainT")
-    console.log(mainT)
-
     const t = (word) => this.props.i18n.t(word);
-
-    const head = 
-
-
-    console.log("mainT2")
-    console.log(mainT)
 
     return (
       <>

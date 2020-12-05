@@ -4,7 +4,7 @@ const Logoicon = (className,height) => {
     return (
         <img
             className={className}
-            src={window.location.origin + "/AboutMe/img/logo.png"}
+            src={window.location.origin + "/img/logo.png"}
             alt="Digital MedTools Logo"
             style={{ height: height }}
         />
