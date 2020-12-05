@@ -1,6 +1,6 @@
 # Daniel Nieto's work portfolio
 
-Available: [https://nietodaniel.github.io/AboutMe/](https://nietodaniel.github.io/AboutMe/)<br/>
+Available: [https://nietodaniel.github.io](https://nietodaniel.github.io)<br/>
 Built with React and Bootstrap. Languages: english, spanish. 
 
 ## Purpose
