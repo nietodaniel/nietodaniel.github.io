@@ -1,6 +1,6 @@
 import React from 'react';
 import PageFrame from './PageFrame';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 class AppRouter extends React.Component {
@@ -56,7 +56,7 @@ class AppRouter extends React.Component {
 
     return (
       <div id="main-container">
-        <Router basename='/'>
+        <Router>
           <PageFrame
             i18n={this.props.i18n}
             ScreenSizeManager={this.ScreenSizeManager}
