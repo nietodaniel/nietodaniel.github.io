@@ -2,26 +2,42 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import ENapps from './locales/en/apps.json';
-import ENappsComingSoon from './locales/en/appsComingSoon.json';
-import ENeducation from './locales/en/education.json';
-import ENentrepreneurships from './locales/en/entrepreneurships.json';
-import ENexperience from './locales/en/experience.json';
-import ENhome from './locales/en/home.json';
-import ENprojects from './locales/en/projects.json';
-import ENrepositories from './locales/en/repositories.json';
-import ENstory from './locales/en/story.json';
-import ESapps from './locales/es/apps.json';
-import ESappsComingSoon from './locales/es/appsComingSoon.json';
-import ESeducation from './locales/es/education.json';
-import ESentrepreneurships from './locales/es/entrepreneurships.json';
-import ESexperience from './locales/es/experience.json';
-import EShome from './locales/es/home.json';
-import ESprojects from './locales/es/projects.json';
-import ESrepositories from './locales/es/repositories.json';
-import ESstory from './locales/es/story.json';
-import ESmain from './locales/es/main.json';
-import ENmain from './locales/en/main.json';
+import ENmain from './locales/es/main.json'
+import ENcookies from './locales/en/cookies.json'
+import ENdataSciencePackages from './locales/en/dataSciencePackages.json'
+import ENeducation from './locales/en/education.json'
+import ENentrepreneurships from './locales/en/entrepreneurships.json'
+import ENexperience from './locales/en/experience.json'
+import ENhome from './locales/en/home.json'
+import ENnotfound from './locales/en/notfound.json'
+import ENprivacy from './locales/en/privacy.json'
+import ENprojects from './locales/en/projects.json'
+import ENrepositories from './locales/en/repositories.json'
+import ENservices from './locales/en/services.json'
+import ENsoftwareFree from './locales/en/softwareFree.json'
+import ENsoftwarePremium from './locales/en/softwarePremium.json'
+import ENstory from './locales/en/story.json'
+import ENterms from './locales/en/terms.json'
+import ENupcomingSoftware from './locales/en/upcomingSoftware.json'
+import ENworkprofile from './locales/en/workprofile.json'
+import ESmain from './locales/es/main.json'
+import EScookies from './locales/es/cookies.json'
+import ESdataSciencePackages from './locales/es/dataSciencePackages.json'
+import ESeducation from './locales/es/education.json'
+import ESentrepreneurships from './locales/es/entrepreneurships.json'
+import ESexperience from './locales/es/experience.json'
+import EShome from './locales/es/home.json'
+import ESnotfound from './locales/es/notfound.json'
+import ESprivacy from './locales/es/privacy.json'
+import ESprojects from './locales/es/projects.json'
+import ESrepositories from './locales/es/repositories.json'
+import ESservices from './locales/es/services.json'
+import ESsoftwareFree from './locales/es/softwareFree.json'
+import ESsoftwarePremium from './locales/es/softwarePremium.json'
+import ESstory from './locales/es/story.json'
+import ESterms from './locales/es/terms.json'
+import ESupcomingSoftware from './locales/es/upcomingSoftware.json'
+import ESworkprofile from './locales/es/workprofile.json'
 
 // don't want to use this?
 // have a look at the Quick start guide
@@ -74,27 +90,43 @@ i18n
     },
     resources: {
       en: {
-        apps: ENapps,
-        appsComingSoon: ENappsComingSoon,
+        cookies: ENcookies,
+        dataSciencePackages: ENdataSciencePackages,
         education: ENeducation,
         entrepreneurships: ENentrepreneurships,
         experience: ENexperience,
         home: ENhome,
+        notfound: ENnotfound,
+        privacy: ENprivacy,
         projects: ENprojects,
         repositories: ENrepositories,
+        services: ENservices,
+        softwareFree: ENsoftwareFree,
+        softwarePremium: ENsoftwarePremium,
         story: ENstory,
+        terms: ENterms,
+        upcomingSoftware: ENupcomingSoftware,
+        workprofile: ENworkprofile,
         main: ENmain
       },
       es: {
-        apps: ESapps,
-        appsComingSoon: ESappsComingSoon,
+        cookies: EScookies,
+        dataSciencePackages: ESdataSciencePackages,
         education: ESeducation,
         entrepreneurships: ESentrepreneurships,
         experience: ESexperience,
         home: EShome,
+        notfound: ESnotfound,
+        privacy: ESprivacy,
         projects: ESprojects,
         repositories: ESrepositories,
+        services: ESservices,
+        softwareFree: ESsoftwareFree,
+        softwarePremium: ESsoftwarePremium,
         story: ESstory,
+        terms: ESterms,
+        upcomingSoftware: ESupcomingSoftware,
+        workprofile: ESworkprofile,
         main: ESmain
       }
     },

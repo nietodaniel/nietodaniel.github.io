@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const terms = ({t}) => { 
   return (
     <div>
-        terms works!
+        {t("componentworks")}
     </div>
   )
 }

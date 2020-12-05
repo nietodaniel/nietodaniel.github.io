@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const softwareFree = ({t}) => { 
   return (
     <div>
-        softwareFree works!
+        {t("componentworks")}
     </div>
   )
 }

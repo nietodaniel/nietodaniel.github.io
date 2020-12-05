@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const education = ({t}) => { 
   return (
     <div>
-        education works!
+        {t("componentworks")}
     </div>
   )
 }

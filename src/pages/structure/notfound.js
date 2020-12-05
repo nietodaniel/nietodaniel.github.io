@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const notfound = ({t}) => {
     return (
         <div>
-            not found
+            {t("componentworks")}
         </div>
     )
 }

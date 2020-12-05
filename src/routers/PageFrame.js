@@ -24,6 +24,8 @@ class PageFrame extends React.Component {
           locale={locale}
           i18n={this.props.i18n}
           mainT={mainT}
+          screenSize={this.props.screenSize}
+          orientation={this.props.orientation} 
           AllowReRender={AllowReRenderTopNavBar}
           path={path}
         />

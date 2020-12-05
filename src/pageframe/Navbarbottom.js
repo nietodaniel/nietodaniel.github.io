@@ -13,7 +13,7 @@ class NavbarBottom extends React.Component {
 
     let LowerContactMenu =""
     let UpperContactMenu =""
-
+ 
     if (this.props.screenSize === 'xs') {
       UpperContactMenu = ContactMenu(
         this.props.mainT,
@@ -45,8 +45,8 @@ class NavbarBottom extends React.Component {
       colDistributionA = 6
       colDistributionB = 6
     } else {
-      colDistributionA= 5
-      colDistributionB = 5
+      colDistributionA= 6
+      colDistributionB = 4
     }
 
     const content = (

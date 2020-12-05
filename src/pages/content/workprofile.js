@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const upcomingSoftware = ({t}) => { 
+const workprofile = ({t}) => { 
   return (
     <div>
         {t("componentworks")}
@@ -9,4 +9,4 @@ const upcomingSoftware = ({t}) => {
   )
 }
 
-export default withTranslation(['upcomingSoftware'])(upcomingSoftware);
+export default withTranslation(['workprofile'])(workprofile);

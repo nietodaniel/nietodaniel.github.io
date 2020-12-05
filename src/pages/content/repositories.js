@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const repositories = ({t}) => { 
   return (
     <div>
-        repositories works!
+        {t("componentworks")}
     </div>
   )
 }

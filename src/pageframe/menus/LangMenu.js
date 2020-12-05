@@ -15,18 +15,19 @@ const LangMenu = (menuClassName,locale,i18n,path) => {
     const currLang = langNames.splice(currLangIndex,1);
     langs.splice(currLangIndex,1);
 
-    const buttonText = currLang;
+    const buttonText = <><i className="text-white las la-globe mr-1"></i><span>{currLang}</span></>;
     const buttonClassName = "btn btn-sm dropdown-toggle menubutton btnWithColor btn-outline-light pt-0 pb-0 dropdown-toggle btn btn-primary";
     const buttonTextClassName = "small";
     const contentClassName = "btn-sm small nicedarkbluebackground dropdown-menu";
     const NavClassName = "small dropdown-item-hover";
     const linkTextClassName="small";
- 
+
     const content = <>
       <Dropdown.Item className={NavClassName} onClick={() => changeLanguage(langs[0])}><span className={linkTextClassName}>{langNames[0]}</span></Dropdown.Item>
     </>
 
     return(
+      <>
       <MainDropDownMenu 
       buttonText={buttonText}
       content={content}
@@ -35,6 +36,7 @@ const LangMenu = (menuClassName,locale,i18n,path) => {
       contentClassName={contentClassName}
       buttonTextClassName={buttonTextClassName}
        />
+      </>
     )
 }
 

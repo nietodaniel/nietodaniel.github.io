@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const softwarePremium = ({t}) => { 
   return (
     <div>
-        softwarePremium works!
+        {t("componentworks")}
     </div>
   )
 }

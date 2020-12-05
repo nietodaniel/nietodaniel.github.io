@@ -12,11 +12,12 @@ import Projects from '../pages/projects/projects';
 import Repositories from '../pages/content/repositories';
 import Story from '../pages/experience/story';
 import Notfound from '../pages/structure/notfound';
-import Contact from '../pages/contact/contact';
 import Terms from '../pages/legal/terms';
 import Privacy from '../pages/legal/privacy';
 import Cookies from '../pages/legal/cookies';
 import DataSciencePackages  from '../pages/content/dataSciencePackages';
+import WorkProfile  from '../pages/content/workprofile';
+import Services  from '../pages/content/services';
 
 class DashboardRoutes extends React.Component {
 
@@ -30,12 +31,13 @@ class DashboardRoutes extends React.Component {
           <Route exact path="/:lang/software/free" render={() => (<FreeSoftware {...customProps}/>)}  />
           <Route exact path="/:lang/software" render={() => (<PremiumSoftware {...customProps}/>)}  />
           <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages {...customProps}/>)}  />
+          <Route exact path="/:lang/workprofile" render={() => (<WorkProfile {...customProps}/>)}  />
+          <Route exact path="/:lang/services" render={() => (<Services {...customProps}/>)}  />
           <Route exact path="/:lang/education" render={() => (<Education {...customProps}/>)}  />
           <Route exact path="/:lang/entrepreneurships" render={() => (<Entrepreneurships {...customProps}/>)}  />
           <Route exact path="/:lang/experience" render={() => (<Experience {...customProps}/>)}  />
           <Route exact path="/:lang/projects" render={() => (<Projects {...customProps}/>)}  />
           <Route exact path="/:lang/repositories" render={() => (<Repositories {...customProps}/>)}  />
-          <Route exact path="/:lang/contact" render={() => (<Contact {...customProps}/>)}  />
           <Route exact path="/:lang/story" render={() => (<Story {...customProps}/>)}  />
           <Route exact path="/:lang/terms" render={() => (<Terms {...customProps}/>)}  />
           <Route exact path="/:lang/privacy" render={() => (<Privacy {...customProps}/>)}  />

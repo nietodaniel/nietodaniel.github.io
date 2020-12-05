@@ -12,6 +12,8 @@ const ExperienceMenu = (mainT,menuClassName,locale) => {
     const linkTextClassName="small";
 
     const content = <>
+      <DropdownNavLink  route={"/workprofile"} name={mainT("workprofile")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
+      <hr className="mt-1 mb-1 m-0 p-0" style={{borderColor:'white'}} />
       <DropdownNavLink  route={"/experience"} name={mainT("experience")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <DropdownNavLink  route={"/education"} name={mainT("education")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <hr className="mt-1 mb-1 m-0 p-0" style={{borderColor:'white'}} />

@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 const privacy = ({t}) => { 
   return (
     <div>
-        privacy works!
+        {t("componentworks")}
     </div>
   )
 }
