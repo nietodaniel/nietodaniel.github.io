@@ -1,7 +1,7 @@
 # Daniel Nieto's work portfolio
 
+Available: [https://nietodaniel.github.io/AboutMe/](https://nietodaniel.github.io/AboutMe/)<br/>
 Built with React and Bootstrap. Languages: english, spanish. 
-Deployed in: [https://nietodaniel.github.io/AboutMe/](https://nietodaniel.github.io/AboutMe/)
 
 ## Purpose
 
@@ -19,6 +19,6 @@ This repository serves as:
 
 ## Author
 
-Daniel Nieto-González ([LinkedIn](https://www.linkedin.com/in/nietodaniel-apps/))
-CEO - [Digital MedTools](http://www.digitalmedtools.com/)
+Daniel Nieto-González ([LinkedIn](https://www.linkedin.com/in/nietodaniel-apps/))<br/>
+CEO - [Digital MedTools](http://www.digitalmedtools.com/)<br/>
 Data scientist & software developer
