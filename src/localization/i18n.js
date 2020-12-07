@@ -38,6 +38,9 @@ import ESstory from '../locales/es/story.json'
 import ESterms from '../locales/es/terms.json'
 import ESupcomingSoftware from '../locales/es/upcomingSoftware.json'
 import ESworkprofile from '../locales/es/workprofile.json'
+import ENcv from '../locales/en/cv.json'
+import EScv from '../locales/es/cv.json'
+
 
 // don't want to use this?
 // have a look at the Quick start guide
@@ -107,7 +110,8 @@ i18n
         terms: ENterms,
         upcomingSoftware: ENupcomingSoftware,
         workprofile: ENworkprofile,
-        main: ENmain
+        main: ENmain,
+        cv: ENcv
       },
       es: {
         cookies: EScookies,
@@ -127,7 +131,8 @@ i18n
         terms: ESterms,
         upcomingSoftware: ESupcomingSoftware,
         workprofile: ESworkprofile,
-        main: ESmain
+        main: ESmain,
+        cv: EScv
       }
     },
   });

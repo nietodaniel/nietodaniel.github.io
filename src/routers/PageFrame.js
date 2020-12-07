@@ -15,6 +15,8 @@ import MainContainer from './MainContainer';
 import GetLocaleAndPath from '../components/modules/GetLocaleAndPath'
 import HtmlHeadManager from '../localization/HtmlHeadManager'
 
+import {MyContext as ScreenProvider} from './ScreenContext';
+
 class PageFrame extends React.Component {
   render() { 
     const {path,locale} = GetLocaleAndPath(this.props.i18n)
@@ -35,17 +37,17 @@ class PageFrame extends React.Component {
           path={path}
         />
         <div id="wrapper" className="toggled">
-
-            <Switch>
+          <Switch>
+            <ScreenProvider value={{'screenSize':this.props.screenSize,'orientation':this.props.orientation}}>
               <MainContainer
                 path="/:lang/"
                 t={t}
                 AllowReRender={AllowReRenderContent}
                 locale={locale}
               />
-              <Redirect to={'/' + locale} />
-            </Switch>
-
+            </ScreenProvider>
+            <Redirect to={'/' + locale} />
+          </Switch>
         </div>
         <NavbarBottom
           locale={locale}

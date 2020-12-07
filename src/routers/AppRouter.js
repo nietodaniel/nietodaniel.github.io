@@ -2,7 +2,6 @@ import React from 'react';
 import PageFrame from './PageFrame';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-
 class AppRouter extends React.Component {
   constructor(props) {
     super(props);

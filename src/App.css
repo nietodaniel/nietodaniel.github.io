@@ -560,3 +560,81 @@ pointer-events: none
   transform-origin:-0.05 -0.05;
 }
 
+.nospace{
+  margin:0;
+  padding:0;
+  display: block;
+}
+
+h1.subtitle{
+  display:block;
+  font-size: 1.7rem;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+h2.subtitle{
+  display:block;
+  font-size: 1.1rem;
+  margin-bottom: .1rem;
+  margin-top: .5rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+h3.subtitle{
+  display:block;
+  font-size: 1.04rem;
+  margin-bottom: .1rem;
+  margin-top: .5rem;
+  font-weight: 510;
+  line-height: 1.2;
+}
+
+h4.subtitle{
+  display:block;
+  font-size: 1.01rem;
+  margin-bottom: .05rem;
+  margin-top: .3rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.nolineP{
+  display: inline-flex;
+  align-items: center;
+}
+
+.nospace > p{
+  margin-bottom: .05rem;
+}
+
+.nospace > ul{
+  margin-bottom: .25rem;
+}
+
+.nospace > ul > li > p{
+  margin-bottom: .05rem;
+}
+
+.littlespace > p{
+  margin-bottom: .2rem;
+}
+
+.littlespace > ul{
+  margin-bottom: .4rem;
+}
+
+.littlespace > ul > li > p{
+  margin-bottom: .2rem;
+}
+
+.newline {
+  display: block;
+}
+
+.normaltextsize{
+  font-size: 10pt;
+}

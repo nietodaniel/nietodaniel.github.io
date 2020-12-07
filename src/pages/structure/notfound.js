@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const notfound = ({t}) => {
+const notfound = ({t,screencontext:{ orientation, screenSize }}) => {
     return (
         <div>
             {t("componentworks")}

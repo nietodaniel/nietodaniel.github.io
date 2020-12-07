@@ -18,32 +18,40 @@ import Cookies from '../pages/legal/cookies';
 import DataSciencePackages  from '../pages/content/dataSciencePackages';
 import WorkProfile  from '../pages/content/workprofile';
 import Services  from '../pages/content/services';
+import Cv from '../pages/experience/cv';
+import { ScreenContext } from "./ScreenContext"
+
 
 class DashboardRoutes extends React.Component {
 
+  static contextType = ScreenContext;
+
   render() {
     console.log("re-rendered main content")
-    const customProps = this.props
+
+    const ScreenContext = this.context
+
     return (
       <>
-        <Switch>
-          <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware {...customProps}/>)}  />
-          <Route exact path="/:lang/software/free" render={() => (<FreeSoftware {...customProps}/>)}  />
-          <Route exact path="/:lang/software" render={() => (<PremiumSoftware {...customProps}/>)}  />
-          <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages {...customProps}/>)}  />
-          <Route exact path="/:lang/workprofile" render={() => (<WorkProfile {...customProps}/>)}  />
-          <Route exact path="/:lang/services" render={() => (<Services {...customProps}/>)}  />
-          <Route exact path="/:lang/education" render={() => (<Education {...customProps}/>)}  />
-          <Route exact path="/:lang/entrepreneurships" render={() => (<Entrepreneurships {...customProps}/>)}  />
-          <Route exact path="/:lang/experience" render={() => (<Experience {...customProps}/>)}  />
-          <Route exact path="/:lang/projects" render={() => (<Projects {...customProps}/>)}  />
-          <Route exact path="/:lang/repositories" render={() => (<Repositories {...customProps}/>)}  />
-          <Route exact path="/:lang/story" render={() => (<Story {...customProps}/>)}  />
-          <Route exact path="/:lang/terms" render={() => (<Terms {...customProps}/>)}  />
-          <Route exact path="/:lang/privacy" render={() => (<Privacy {...customProps}/>)}  />
-          <Route exact path="/:lang/cookies" render={() => (<Cookies {...customProps}/>)}  />
-          <Route exact path="/:lang/" render={() => (<Home {...customProps}/>)}  />
-          <Route path="" render={() => (<Notfound {...customProps}/>)}  />
+        <Switch class="">
+          <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/software/free" render={() => (<FreeSoftware screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/software" render={() => (<PremiumSoftware screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/workprofile" render={() => (<WorkProfile screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/services" render={() => (<Services screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/education" render={() => (<Education screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/entrepreneurships" render={() => (<Entrepreneurships screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/experience" render={() => (<Experience screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/projects" render={() => (<Projects screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/repositories" render={() => (<Repositories screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/story" render={() => (<Story screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/terms" render={() => (<Terms screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/privacy" render={() => (<Privacy screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/cv" render={() => (<Cv screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/cookies" render={() => (<Cookies screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/" render={() => (<Home screencontext={ScreenContext} />)}  />
+          <Route path="" render={() => (<Notfound screencontext={ScreenContext} />)}  />
         </Switch>
       </>
     );

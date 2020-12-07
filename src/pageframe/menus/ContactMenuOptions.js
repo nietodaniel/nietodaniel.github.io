@@ -1,5 +1,6 @@
 import React from 'react'
 import DropdownExternalLink from '../../components/menus/DropdownExternalLink';
+import {CelSolid,CelSolidPlus,CelVisual,Email} from '../../components/modules/MyContactInfo';
 
 const NavClassName = "small dropdown-item-hover "
 
@@ -10,16 +11,16 @@ const ContactMenuOptions = (mainT) => {
   </>
 
   const callButtonContent= <>
-    <i className="las la-phone la-lg" style={{color: '#ffffff'}}></i ><span className="small  m-1">{"+057 3232350963"}</span>
+    <i className="las la-phone la-lg" style={{color: '#ffffff'}}></i ><span className="small  m-1">{CelVisual()}</span>
   </>
 
   const emailButtonContent= <>
     <i className="las la-envelope la-lg" style={{color: '#ffffff'}}></i ><span className="small  m-1">{"nieto.daniel221@gmail.com"}</span>
   </>
   
-  const wappURL = "https://api.whatsapp.com/send?phone=573232350963&text=" + mainT("help")
-  const callURL = "tel:+573232350963"
-  const emailURL = "mailto:nieto.daniel221@gmail.com"
+  const wappURL = "https://api.whatsapp.com/send?phone=" + CelSolid() + "&text=" + mainT("help")
+  const callURL = "tel:"+CelSolidPlus()
+  const emailURL = "mailto:"+Email()
   
   return(
     <>

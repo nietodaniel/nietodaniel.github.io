@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const softwarePremium = ({t}) => { 
+const softwarePremium = ({t,screencontext:{ orientation, screenSize }}) => { 
   return (
     <div>
         {t("componentworks")}
