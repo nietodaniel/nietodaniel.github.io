@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import ENmain from '../locales/es/main.json'
+import ENmain from '../locales/en/main.json'
 import ENcookies from '../locales/en/cookies.json'
 import ENdataSciencePackages from '../locales/en/dataSciencePackages.json'
 import ENeducation from '../locales/en/education.json'

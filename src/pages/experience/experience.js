@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const experience = ({t,screencontext:{ screenType }}) => { 
+const experience = ({t,screenType }) => { 
   return (
     <div>
         {t("componentworks")}

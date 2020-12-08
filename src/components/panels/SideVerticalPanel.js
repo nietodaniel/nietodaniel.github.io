@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SideVerticalPanel = (screenType,leftContent,rightContent) => {
-    
+
     let containerClass = "container-fluid m-0 p-0  pr-1 pl-1" 
 
     if (screenType!=="normal"){

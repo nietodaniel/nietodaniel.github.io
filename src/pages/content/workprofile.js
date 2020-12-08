@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const workprofile = ({t,screencontext:{ screenType }}) => { 
+const workprofile = ({t,screenType }) => { 
   return (
     <div>
         {t("componentworks")}

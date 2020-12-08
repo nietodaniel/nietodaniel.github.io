@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NormalPanel = (orientation, screenSize,content) => {
+const NormalPanel = (screenType,content) => {
     const res =  <>
             <div className={"p-0 col col-12 col-md-8 offset-md-2"}>
                 <span>{content}</span>

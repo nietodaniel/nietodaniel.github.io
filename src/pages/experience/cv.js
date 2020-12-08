@@ -12,7 +12,7 @@ import Experience from '../../pageparts/cv/Experience';
 import Repositories from '../../pageparts/cv/Repositories';
 import Awards from '../../pageparts/cv/Awards';
 
-const cv = ({t,screencontext:{ screenType }}) => { 
+const cv = ({t,screenType }) => { 
 
   const full = <>
     {MyInfo(t)}

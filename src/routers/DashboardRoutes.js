@@ -19,39 +19,33 @@ import DataSciencePackages  from '../pages/content/dataSciencePackages';
 import WorkProfile  from '../pages/content/workprofile';
 import Services  from '../pages/content/services';
 import Cv from '../pages/experience/cv';
-import { ScreenContext } from "./ScreenContext"
 
 
 class DashboardRoutes extends React.Component {
 
-  static contextType = ScreenContext;
-
   render() {
-
-
-    const ScreenContext = this.context
 
     return (
       <>
         <Switch>
-          <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/software/free" render={() => (<FreeSoftware screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/software" render={() => (<PremiumSoftware screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/workprofile" render={() => (<WorkProfile screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/services" render={() => (<Services screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/education" render={() => (<Education screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/entrepreneurships" render={() => (<Entrepreneurships screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/experience" render={() => (<Experience screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/projects" render={() => (<Projects screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/repositories" render={() => (<Repositories screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/story" render={() => (<Story screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/terms" render={() => (<Terms screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/privacy" render={() => (<Privacy screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/cv" render={() => (<Cv screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/cookies" render={() => (<Cookies screencontext={ScreenContext} />)}  />
-          <Route exact path="/:lang/" render={() => (<Home screencontext={ScreenContext} />)}  />
-          <Route path="" render={() => (<Notfound screencontext={ScreenContext} />)}  />
+          <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/software/free" render={() => (<FreeSoftware screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/software" render={() => (<PremiumSoftware screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/workprofile" render={() => (<WorkProfile screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/services" render={() => (<Services screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/education" render={() => (<Education screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/entrepreneurships" render={() => (<Entrepreneurships screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/experience" render={() => (<Experience screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/projects" render={() => (<Projects screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/repositories" render={() => (<Repositories screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/story" render={() => (<Story screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/terms" render={() => (<Terms screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/privacy" render={() => (<Privacy screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/cv" render={() => (<Cv screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/cookies" render={() => (<Cookies screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/" render={() => (<Home screenType={this.props.screenType} />)}  />
+          <Route path="" render={() => (<Notfound screenType={this.props.screenType} />)}  />
         </Switch>
       </>
     );

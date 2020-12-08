@@ -2,6 +2,7 @@ import React from 'react';
 import FollowUsMenu from './menus/FollowUsMenu';
 import PrivacyMenu from './menus/PrivacyMenu';
 import ContactMenu from './menus/ContactMenu';
+import { withTranslation } from 'react-i18next';
 
 class NavbarBottom extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -11,12 +12,13 @@ class NavbarBottom extends React.Component {
   render() {
     console.log('NavBar Bottom re-rendered');
 
+
     let LowerContactMenu =""
     let UpperContactMenu =""
  
     if (this.props.screenType === 'miniV') {
       UpperContactMenu = ContactMenu(
-        this.props.mainT,
+        this.props.t,
         true
       );
       }else{
@@ -24,7 +26,7 @@ class NavbarBottom extends React.Component {
       LowerContactMenu = (
         <div className="small small col-2 text-center m-auto p-0">
           <span className="d-none d-sm-block">
-            {ContactMenu(this.props.mainT, false)}
+            {ContactMenu(this.props.t, false)}
           </span>
           <span> </span>
         </div>
@@ -49,11 +51,11 @@ class NavbarBottom extends React.Component {
     const content = (
       <>
         <div className={"col-" + colDistributionA + " text-center m-auto p-0"}>
-          {FollowUsMenu(this.props.mainT, this.props.screenType)}
+          {FollowUsMenu(this.props.t, this.props.screenType)}
         </div>
         <div className={"col-" + colDistributionB + " text-center m-auto p-0 small"}>
           {PrivacyMenu(
-            this.props.mainT,
+            this.props.t,
             this.props.screenType,
             this.props.locale
           )}
@@ -80,4 +82,4 @@ class NavbarBottom extends React.Component {
   }
 }
 
-export default NavbarBottom;
+export default withTranslation(['main'])(NavbarBottom);

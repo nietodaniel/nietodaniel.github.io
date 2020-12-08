@@ -14,9 +14,6 @@ import MainContainer from './MainContainer';
 import HtmlHeadManager from '../localization/HtmlHeadManager'
 import {getCurrentScreenType} from '../components/modules/ScreenType'
 
-
-import {MyContext as ScreenProvider} from './ScreenContext';
-
 class PageFrame extends React.Component {
 
   constructor(props) {
@@ -54,18 +51,16 @@ class PageFrame extends React.Component {
         <NavbarTop
           locale={this.props.locale}
           i18n={this.props.i18n}
-          mainT={this.props.mainT}
           path={this.props.path}
           screenType={this.state.screenType}
           AllowReRender={AllowReRenderTopNavBar}
         />
         <div id="wrapper" className="toggled">
-          <ScreenProvider value={{'screenType':this.state.screenType}}></ScreenProvider>
             <Switch>
               {redirectIfNecesarry}          
               <MainContainer
                 path="/:lang/"
-                t={this.props.t}
+                screenType={this.state.screenType}
                 AllowReRender={AllowReRenderContent}
                 locale={this.props.locale}
               />
@@ -74,7 +69,6 @@ class PageFrame extends React.Component {
         </div>
         <NavbarBottom
           locale={this.props.locale}
-          mainT={this.props.mainT}
           AllowReRender={AllowReRenderBottomNavBar}
           screenType={this.state.screenType}
         />

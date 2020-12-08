@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const cookies = ({t,screencontext:{ screenType }}) => { 
+const cookies = ({t,screenType }) => { 
   return (
     <div>
         {t("componentworks")}

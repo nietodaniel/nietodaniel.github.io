@@ -16,9 +16,9 @@ const ProfilePic = (className,width) => {
     return (
         <img
             className={className}
-            src={window.location.origin + "/img/daniel_nieto.png"}
+            src={window.location.origin + "/img/daniel_nieto.jpg"}
             alt={"Daniel Nieto González: " + role}
-            style={{ width: width }}
+            style={{ width: width,border:'#222222 solid 1px'}}
         />
     )
 }
