@@ -2,9 +2,13 @@ import React from 'react';
 import MainDropDownMenu from '../../components/menus/MainDropDownMenu';
 import {Dropdown} from 'react-bootstrap'
 
-const LangMenu = (menuClassName,locale,i18n,path) => {
-    const changeLanguage = lng => {
-      window.history.pushState({}, null, '/'+lng+path);
+const LangMenu = (menuClassName,i18n,locale,path) => {
+
+    console.log("pathInLang")
+    console.log(path)
+
+    const changeLanguage = (lng) => {
+      window.history.pushState({}, null, '/'+lng+"/"+path);
       i18n.changeLanguage(lng);
     };
  

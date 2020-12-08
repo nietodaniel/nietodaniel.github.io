@@ -12,7 +12,7 @@ class NavbarTop extends React.Component {
   }
 
   render() {
-    console.log("NavBar Top re-rendered")
+
     const menuClassName =
       'nav-item dropdown m-0  mainmenuitem';
 
@@ -20,14 +20,14 @@ class NavbarTop extends React.Component {
     let postZone = ""
     let lowerMenusWidth = 2
 
-    if (this.props.screenSize === 'xs' || (this.props.screenSize==="sm" && this.props.orientation===false ) ) {
+    if (this.props.screenType === 'miniV') {
       lowerMenusWidth = 4
       preZone= <>
         <div className="col-9 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
           {HomeLink(this.props.mainT,this.props.locale)}
         </div>
         <div className="col-3 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
-          {LangMenu(menuClassName, this.props.locale, this.props.i18n, this.props.path)}
+          {LangMenu(menuClassName, this.props.i18n,this.props.locale,this.props.path)}
         </div>
       </>
     } else {
@@ -35,7 +35,7 @@ class NavbarTop extends React.Component {
         {HomeLink(this.props.mainT,this.props.locale)}
       </div>
       postZone = <div className="col-2 text-center  m-0 p-0 d-inline" style={{ minHeight: '24px' }}>
-        {LangMenu(menuClassName, this.props.locale, this.props.i18n, this.props.path)}
+        {LangMenu(menuClassName, this.props.i18n, this.props.locale,this.props.path)}
       </div>
     }
 

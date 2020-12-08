@@ -2,10 +2,10 @@ import React from 'react';
 import fontIcon from '../../components/text/FontIcon';
 import AppIcon from './AppIcon';
 
-const FollowUsMenu = (t, screenSize,orientation) => {
+const FollowUsMenu = (t, screenType) => {
   const textclass = 'align-middle text-center small';
   let iconSize = 'la-lg';
-  if (orientation === false) {
+  if (screenType !== 'miniV') {
     iconSize = 'la-lg';
   }
 
@@ -23,7 +23,7 @@ const FollowUsMenu = (t, screenSize,orientation) => {
   );
 
   let content = "";
-  if (screenSize === 'xs' || (screenSize==="sm" && orientation===false ) ) {
+  if (screenType === 'miniV') {
     content = (
       <>
         <span className="d-table-row small">{title}</span>

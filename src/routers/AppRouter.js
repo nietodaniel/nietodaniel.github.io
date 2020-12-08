@@ -1,71 +1,27 @@
 import React from 'react';
 import PageFrame from './PageFrame';
-import { BrowserRouter as Router } from 'react-router-dom';
+import GetLocaleAndPath from '../components/modules/GetLocaleAndPath';
+import { useLocation,useHistory } from 'react-router-dom'
 
-class AppRouter extends React.Component {
-  constructor(props) {
-    super(props);
-    const screenSize = this.ScreenSizeManager.getCurrentScreenSize();
-    this.state = {
-      screenSize: screenSize
-    };
-  }
+const AppRouter = ({i18n}) => {
 
-  componentDidMount() {
-    this.ScreenSizeManager.OrientationEvent();
-  }
+  const history = useHistory();
+  const location = useLocation();
 
-  ScreenSizeManager = {
-    OrientationChanger: () => {
-      // `this` is now pointing to `window`, not the component. So use `self`.
-      const currentScreenSize = this.ScreenSizeManager.getCurrentScreenSize();
-      this.setState({
-        screenSize: currentScreenSize
-      });
-    },
-    OrientationEvent: () => {
-      if ('onorientationchange' in window) {
-        window.addEventListener(
-          'orientationchange',
-          this.ScreenSizeManager.OrientationChanger,
-          true
-        );
-      }
-    },
-    getCurrentScreenSize: () => {
-      let screenWidth = window.screen.width;
-      let screenSize = '';
-      if (screenWidth < 768) {
-        screenSize = 'xs';
-      } else if (screenWidth < 992) {
-        screenSize = 'sm';
-      } else if (screenWidth < 1200) {
-        screenSize = 'md';
-      } else {
-        screenSize = 'lg';
-      }
-      return screenSize;
-    },
-  };
+  const mainT = (word) =>i18n.t('main:' + word);
+  const t = (word) => i18n.t(word);
 
-  render() {
-    const w= window.screen.width;
-    const h = window.screen.height;
-    const orientation = h<w;
+  const {locale,path} = GetLocaleAndPath(i18n,location.pathname)
+  console.log("{locale,path}")
+  console.log(locale,path)
 
     return (
       <div id="main-container">
-        <Router>
           <PageFrame
-            i18n={this.props.i18n}
-            ScreenSizeManager={this.ScreenSizeManager}
-            screenSize={this.state.screenSize}
-            orientation={orientation}
+            i18n={i18n} path={path} mainT={mainT} t={t} locale={locale}
           />
-        </Router>
       </div>
     );
-  }
 }
 
 export default AppRouter;

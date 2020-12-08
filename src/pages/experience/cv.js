@@ -12,7 +12,7 @@ import Experience from '../../pageparts/cv/Experience';
 import Repositories from '../../pageparts/cv/Repositories';
 import Awards from '../../pageparts/cv/Awards';
 
-const cv = ({t,screencontext:{ orientation, screenSize }}) => { 
+const cv = ({t,screencontext:{ screenType }}) => { 
 
   const full = <>
     {MyInfo(t)}
@@ -31,7 +31,7 @@ const cv = ({t,screencontext:{ orientation, screenSize }}) => {
     <div className="normaltextsize container-fluid mb-5">
       <span className="col-12">
         <span className="small">
-          {NormalPanel(orientation, screenSize,full)}
+          {NormalPanel(screenType,full)}
         </span>
       </span>
     </div>

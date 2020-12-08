@@ -1,12 +1,12 @@
 import React from 'react'
 import MenuNavLink from '../../components/buttons/MenuNavLink';
 
-const PrivacyMenu = (t,screenSize,orientation,locale) => {
+const PrivacyMenu = (t,screenType,locale) => {
 
     const NavClassName = "linktext pr-2";
     
     let addClass = "";
-    if(screenSize==="xs"){
+    if(screenType!=="normal"){
         addClass = "small ";
     }
 
@@ -23,7 +23,7 @@ const PrivacyMenu = (t,screenSize,orientation,locale) => {
     let content = ""
 
 
-    if(screenSize==="xs" || (screenSize==="sm" && orientation===true )){
+    if(screenType!=="normal"){
         content = <>
             <span className="d-table-row">{rights}</span>
             <span className="d-table-row">{TermsNpolicies}</span>

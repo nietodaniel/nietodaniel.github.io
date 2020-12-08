@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-const ScreenContext = React.createContext({'screensize':'unset','orientation':'unset'})
+const ScreenContext = React.createContext({'screenType':'unset'})
 
 const ScreenProvider = ScreenContext.Provider
 // const ScreenConsumer = ScrennContext.Consumer

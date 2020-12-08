@@ -3,7 +3,6 @@ import React from 'react';
 import NavbarTop from '../pageframe/Navbartop';
 import NavbarBottom from '../pageframe/Navbarbottom';
 
-
 import { Redirect, Switch } from 'react-router-dom';
 import {
   AllowReRenderTopNavBar,
@@ -12,50 +11,67 @@ import {
   AllowReRenderHelmet
 } from '../components/modules/AllowReRender';
 import MainContainer from './MainContainer';
-import GetLocaleAndPath from '../components/modules/GetLocaleAndPath'
 import HtmlHeadManager from '../localization/HtmlHeadManager'
+import {getCurrentScreenType} from '../components/modules/ScreenType'
+
 
 import {MyContext as ScreenProvider} from './ScreenContext';
 
 class PageFrame extends React.Component {
+
+  constructor(props) {
+    super(props);
+    const screenType = getCurrentScreenType()
+    this.state = {
+      screenType: screenType,
+    };
+  }
+
+  componentDidMount() {
+    if ('onorientationchange' in window) {
+      window.addEventListener(
+        'orientationchange',
+        () => {
+          // `this` is now pointing to `window`, not the component. So use `self`.
+          const currentscreenType = getCurrentScreenType();
+          this.setState({
+            screenType: currentscreenType,
+          });
+        },
+        true
+      );
+    }
+  }
+
   render() { 
-    const {path,locale} = GetLocaleAndPath(this.props.i18n)
-
-    const mainT = (word) => this.props.i18n.t('main:' + word);
-    const t = (word) => this.props.i18n.t(word);
-
     return (
       <>
-        <HtmlHeadManager locale={locale} AllowReRender={AllowReRenderHelmet} />
+        <HtmlHeadManager locale={this.props.locale} AllowReRender={AllowReRenderHelmet} />
         <NavbarTop
-          locale={locale}
+          locale={this.props.locale}
           i18n={this.props.i18n}
-          mainT={mainT}
-          screenSize={this.props.screenSize}
-          orientation={this.props.orientation} 
+          mainT={this.props.mainT}
+          path={this.props.path}
+          screenType={this.state.screenType}
           AllowReRender={AllowReRenderTopNavBar}
-          path={path}
         />
         <div id="wrapper" className="toggled">
-          <Switch>
-            <ScreenProvider value={{'screenSize':this.props.screenSize,'orientation':this.props.orientation}}>
+          <ScreenProvider value={{'screenType':this.state.screenType}}></ScreenProvider>
+            <Switch>          
               <MainContainer
                 path="/:lang/"
-                t={t}
+                t={this.props.t}
                 AllowReRender={AllowReRenderContent}
-                locale={locale}
+                locale={this.props.locale}
               />
-            </ScreenProvider>
-            <Redirect to={'/' + locale} />
+            <Redirect to={'/' + this.props.locale} />
           </Switch>
         </div>
         <NavbarBottom
-          locale={locale}
-          mainT={mainT}
+          locale={this.props.locale}
+          mainT={this.props.mainT}
           AllowReRender={AllowReRenderBottomNavBar}
-          ScreenSizeManager={this.props.ScreenSizeManager}
-          screenSize={this.props.screenSize}
-          orientation={this.props.orientation} 
+          screenType={this.state.screenType}
         />
       </>
     );

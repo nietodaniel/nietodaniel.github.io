@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-const entrepreneurships = ({t,screencontext:{ orientation, screenSize }}) => { 
+const entrepreneurships = ({t,screencontext:{ screenType }}) => { 
   return (
     <div>
         {t("componentworks")}

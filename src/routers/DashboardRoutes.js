@@ -27,13 +27,13 @@ class DashboardRoutes extends React.Component {
   static contextType = ScreenContext;
 
   render() {
-    console.log("re-rendered main content")
+
 
     const ScreenContext = this.context
 
     return (
       <>
-        <Switch class="">
+        <Switch>
           <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware screencontext={ScreenContext} />)}  />
           <Route exact path="/:lang/software/free" render={() => (<FreeSoftware screencontext={ScreenContext} />)}  />
           <Route exact path="/:lang/software" render={() => (<PremiumSoftware screencontext={ScreenContext} />)}  />

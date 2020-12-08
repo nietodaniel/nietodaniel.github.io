@@ -14,7 +14,7 @@ class NavbarBottom extends React.Component {
     let LowerContactMenu =""
     let UpperContactMenu =""
  
-    if (this.props.screenSize === 'xs') {
+    if (this.props.screenType === 'miniV') {
       UpperContactMenu = ContactMenu(
         this.props.mainT,
         true
@@ -39,26 +39,22 @@ class NavbarBottom extends React.Component {
       </>
     );
 
-    let colDistributionA = "";
-    let colDistributionB = "";
-    if (this.props.screenSize === 'xs' || (this.props.screenSize==="sm" && this.props.orientation===false ) ) {
+    let colDistributionA = 6;
+    let colDistributionB = 4;
+    if (this.props.screenType==="miniV" ) {
       colDistributionA = 6
       colDistributionB = 6
-    } else {
-      colDistributionA= 6
-      colDistributionB = 4
     }
 
     const content = (
       <>
         <div className={"col-" + colDistributionA + " text-center m-auto p-0"}>
-          {FollowUsMenu(this.props.mainT, this.props.screenSize,this.props.orientation)}
+          {FollowUsMenu(this.props.mainT, this.props.screenType)}
         </div>
         <div className={"col-" + colDistributionB + " text-center m-auto p-0 small"}>
           {PrivacyMenu(
             this.props.mainT,
-            this.props.screenSize,
-            this.props.orientation,
+            this.props.screenType,
             this.props.locale
           )}
         </div>

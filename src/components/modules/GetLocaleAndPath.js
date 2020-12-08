@@ -1,29 +1,40 @@
-const GetLocaleAndPath = (i18n) => {
-  let fullPath = window.location.pathname;
-  if (fullPath.substr(fullPath.length - 1) === '/')
-    fullPath = fullPath.slice(0, -1);
-  if (fullPath.substr(fullPath.length - 1) === '#')
-    fullPath = fullPath.slice(0, -1);
-  const parts = fullPath.split('/');
-  if (parts.length > 1) {
-    parts.splice(1, 1);
-  }
-  let path = parts.join('/');
-  if (path.length === 0) path = '/';
-  let locale =
-    i18n.language || window.localStorage.i18nextLng || '';
-  if (locale === '') {
-    locale = 'en';
-  }
-
-  const res ={
-    locale: locale,
-    path: path
-  }
-  
-  return (
-    res
-  )
+const GetURLParts = (path) => {
+  if (path.charAt(path.length - 1) === '/')
+    path = path.substring(0, -1);
+  if (path.charAt(path.length - 1) === '#')
+    path = path.substring(0, -1);
+  if (path.charAt(0) === '/')
+    path = path.substring(1)
+  const parts = path.split('/');
+  return parts
 }
 
-export default GetLocaleAndPath;
+const GetLocaleAndPath = (i18n,fullpath) => {
+  let locale = i18n.language || window.localStorage.i18nextLng
+  let parts = GetURLParts(fullpath)
+  let tmpLocale =  parts.shift();
+  let faultyLocale=false
+  if (tmpLocale !== 'en' && tmpLocale !== 'es'){
+    console.log("XXXX")
+    console.log(tmpLocale,parts)
+    parts = [tmpLocale].concat(parts)
+    tmpLocale="en"
+    faultyLocale=true
+  }
+  if (locale !== 'en' && locale !== 'es') {
+    if(parts.length>0){   
+      locale=tmpLocale
+    }else{
+      locale='en'
+    }
+  }
+  let path = ""
+  console.log(parts)
+  path = parts.join("/")
+  if(faultyLocale===true){
+    window.history.pushState({}, null, '/'+locale+"/"+path);
+  }
+  return {locale:locale,path:path}
+}
+
+export default GetLocaleAndPath

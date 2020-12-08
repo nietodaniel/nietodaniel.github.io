@@ -1,4 +1,5 @@
 import PRM from '../../components/textProcessor/PRM';
+import React from 'react'
 
 const Summary = (tCV) => {
 
