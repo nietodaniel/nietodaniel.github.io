@@ -44,6 +44,11 @@ class PageFrame extends React.Component {
   }
 
   render() { 
+    let redirectIfNecesarry=""
+    if(this.props.faultyLocale===true){
+      console.log("faulty es verdadero")
+      redirectIfNecesarry=<Redirect to={'/' + this.props.locale + '/' + this.props.path} />
+    }
     return (
       <>
         <HtmlHeadManager locale={this.props.locale} AllowReRender={AllowReRenderHelmet} />
@@ -57,7 +62,8 @@ class PageFrame extends React.Component {
         />
         <div id="wrapper" className="toggled">
           <ScreenProvider value={{'screenType':this.state.screenType}}></ScreenProvider>
-            <Switch>          
+            <Switch>
+              {redirectIfNecesarry}          
               <MainContainer
                 path="/:lang/"
                 t={this.props.t}

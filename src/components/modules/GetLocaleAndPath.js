@@ -1,3 +1,5 @@
+import { Redirect } from 'react-router-dom';
+
 const GetURLParts = (path) => {
   if (path.charAt(path.length - 1) === '/')
     path = path.substring(0, -1);
@@ -9,7 +11,7 @@ const GetURLParts = (path) => {
   return parts
 }
 
-const GetLocaleAndPath = (i18n,fullpath) => {
+const GetLocaleAndPath = (i18n,fullpath,history) => {
   let locale = i18n.language || window.localStorage.i18nextLng
   let parts = GetURLParts(fullpath)
   let tmpLocale =  parts.shift();
@@ -32,9 +34,9 @@ const GetLocaleAndPath = (i18n,fullpath) => {
   console.log(parts)
   path = parts.join("/")
   if(faultyLocale===true){
-    window.history.pushState({}, null, '/'+locale+"/"+path);
+    window.history.replaceState(null, {}, '/'+locale+"/"+path)
   }
-  return {locale:locale,path:path}
+  return {locale:locale,path:path,faultyLocale:faultyLocale}
 }
 
 export default GetLocaleAndPath
