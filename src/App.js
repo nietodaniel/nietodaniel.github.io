@@ -15,7 +15,7 @@ const App = () =>{
       <I18nextProvider>
         <HelmetProvider context={helmetContext}>
           <Router history={history}>
-            <AppRouter i18n={i18n} history={history} />
+            <AppRouter i18n={i18n} />
           </Router>
         </HelmetProvider>
       </I18nextProvider>

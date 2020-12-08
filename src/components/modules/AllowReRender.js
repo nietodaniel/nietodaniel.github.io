@@ -1,5 +1,4 @@
 export const AllowReRenderTopNavBar = (nextProps, currentProps) => {
-  console.log("evaluating top")
   if(nextProps.locale!==currentProps.locale)
     return true;
     if(nextProps.path!==currentProps.path)
@@ -10,7 +9,6 @@ export const AllowReRenderTopNavBar = (nextProps, currentProps) => {
 }
 
 export const AllowReRenderBottomNavBar = (nextProps, currentProps) => {
-  console.log("evaluating bottom")
   if(nextProps.locale!==currentProps.locale)
     return true;
   if(currentProps.screenType!==nextProps.screenType)
@@ -19,7 +17,6 @@ export const AllowReRenderBottomNavBar = (nextProps, currentProps) => {
 }
 
 export const AllowReRenderContent = (nextProps, currentProps) => {
-  console.log("evaluating content")
   if(nextProps.path!==currentProps.path){
     return true;
   }
@@ -27,7 +24,6 @@ export const AllowReRenderContent = (nextProps, currentProps) => {
 }
 
 export const AllowReRenderHelmet = (nextProps, currentProps) => {
-  console.log("evaluating helmet")
   if(nextProps.locale!==currentProps.locale){
     return true;
   }

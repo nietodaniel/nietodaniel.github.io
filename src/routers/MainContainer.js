@@ -8,7 +8,6 @@ class MainContainer extends React.Component {
   }
   
   render() {
-
     return (
       <DashboardRoutes locale={this.props.locale} />
     );
