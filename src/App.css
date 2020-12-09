@@ -155,21 +155,20 @@ hr { display: block; height: 3px;
 }
 
 .tooltip > .tooltip-inner {
-  background-color:#1858d0;
+  background-color:#d09c18;
   color: #000;
   font-size: 80%;
-  padding:0;
-  margin:0;
-  border: 1px solid  rgb(10, 31, 22);
+  line-height:20px;
+  border: 1px solid  #57410b;
   text-align:center;
 }
 
 .bs-tooltip-auto[x-placement^="top"] .arrow::before, .bs-tooltip-top .arrow::before {
-  border-top-color: #1858d0 !important;
+  border-top-color: #d09c18 !important;
 }
 
 .Appbackgroundcolor{
-  background-color:#1858d0;
+  background-color:#d09c18;
 }
 
 .btn.menubutton{
@@ -204,6 +203,7 @@ hr { display: block; height: 3px;
 .btn.AppbackgroundcolorB{
   background-color:#0275bd;
 }
+
 
 
 a.span:hover {
@@ -648,12 +648,19 @@ h4.subtitle{
   font-size: 9pt;
 }
 
+.btn.normaltextsize{
+  min-width:100px;
+  max-width:100px;
+}
+
 .btn.normaltextsize .small{
   font-size: 8pt;
-  display:inline-block;
+  text-align:center;
+  display:inline-flex;
+  vertical-align: middle;
   position:relative;
-  min-width:80px;
-  max-width:80px;
+  min-height:40px;
+  align-items: center;
 }
 
 .fullheight{
@@ -665,4 +672,20 @@ h4.subtitle{
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.dropdown .dropdown-menu {
+  border: solid rgb(54,63,59) 1px;
+  background-color: rgb(4,13,9);
+}
+
+.vertical-adjustable:before {
+  content: "";
+  display: inline-block;
+  height: 85%;
+  vertical-align: middle;
+}
+
+.btn.AppbackgroundcolorB.dpdf{
+  background-color:#c76000;
 }

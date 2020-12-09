@@ -32,15 +32,18 @@ const cv = ({t,screenType }) => {
     <span>{References(tCV)}</span>
   </>
 
-  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto d-table-cell"
+  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto"
   const conctactSection = ContactSnippet("miniV",tCV,tMain,buttonClassName,true,true)
 
   return (
     <div className="normaltextsize container-fluid mb-5">
       <span className="col-12 small">
-          {NormalPanel("screenType",full)}
+          {conctactSection}
       </span>
       <span className="col-12 small">
+          {NormalPanel("screenType",full)}
+      </span>
+      <span className="col-12 small" style={{padding:'-15px'}}>
           {conctactSection}
       </span>
     </div>

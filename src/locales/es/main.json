@@ -17,7 +17,7 @@
 	"help": "Saludos Sr. Nieto, lo contactamos tras revisar su curriculum vitae.",
 	"moreaboutme": "Más sobre mi: ",
 	"mystory": "Mi historia",
-	"references" : "Referencias laborales",
+	"references": "Referencias laborales",
 	"policies": "Políticas:",
 	"premium": "Premium",
 	"privacy": "Privacidad",
@@ -32,5 +32,9 @@
 	"workprofile": "Perfil laboral",
 	"p_s": "Portafolio",
 	"cv": "Curriculum Vitae",
-	"viewcv": "Ver curriculum vitae completo"
+	"viewcv": "Curriculum vitae (completo)",
+	"downloadpdf": "Descargar CV como .pdf",
+	"cv_info": "Ver mi curriculum vitae completo",
+	"skills_info": "Mis habilidades en ciencia de datos y desarrollo de software",
+	"download_info": "Descarga mi curriculum vitae completo como .pdf (En inglés)"
 }

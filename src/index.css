@@ -11,10 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.vertical-adjustable:before {
-  content: "";
-  display: inline-block;
-  height: 85%;
-  vertical-align: middle;
-}

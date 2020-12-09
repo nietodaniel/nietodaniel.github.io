@@ -9,7 +9,7 @@ const experience = ({t,screenType }) => {
   const tCV = (word) => TX(t,word,"cv")
   const tMain = (word) => TX(t,word,"main")
 
-  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto d-table-cell"
+  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto"
   const rightContent = ContactSnippet(screenType,tCV,tMain,buttonClassName)
 
   const leftContent = <>

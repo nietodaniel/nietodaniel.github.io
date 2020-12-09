@@ -17,7 +17,7 @@ const home = ({t,screenType }) => {
     <div className="row w-100 m-0 p-0">
       <div className="offset-1 col-11 text-center">
         {ProfilePic("","30vh")}
-        <span class="small">{MyInfo(tCV)}</span>
+        <span className="small">{MyInfo(tCV)}</span>
       </div>
       <div className="mt-2 offset-1 col-11">
         {Summary(tCV)}
@@ -29,7 +29,7 @@ const home = ({t,screenType }) => {
     <div className="row w-100 m-0 p-0">
       <div className="col-12 text-center">
         {ProfilePic("","20vh")}
-        <span class="small">{MyInfo(tCV)}</span>
+        <span className="small">{MyInfo(tCV)}</span>
       </div>
       <div className="mt-1 col-12">
         {Summary(tCV)}
@@ -52,7 +52,7 @@ const home = ({t,screenType }) => {
     </div>
   }
 
-  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto d-table-cell"
+  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark p-0 m-auto"
   const rightContent = ContactSnippet(screenType,tCV,tMain,buttonClassName)
 
 

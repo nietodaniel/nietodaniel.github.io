@@ -3,9 +3,13 @@ import Overlay from 'react-bootstrap/Overlay'
 import Tooltip from 'react-bootstrap/Tooltip'
 import { useRef, useState } from "react";
 
-const LinkWithInfo = (buttonClassName,ButtonText,TooltipText,as,href) => {
+const LinkWithInfo = (buttonClassName,ButtonText,TooltipText,as,href,isTblank) => {
     const [show, setShow] = useState(false);
     const target = useRef(null);
+
+    let tblank = ""
+    if(isTblank===true)
+    tblank="_blank"
 
     const enterEvent = () =>{
       setShow(true)
@@ -17,7 +21,7 @@ const LinkWithInfo = (buttonClassName,ButtonText,TooltipText,as,href) => {
     
     return (
       <>
-        <a as={as} ref={target} className={"infolink "+buttonClassName} href={href} onMouseEnter={enterEvent} onMouseLeave={exitEvent} >
+        <a as={as} ref={target} className={"infolink "+buttonClassName} href={href} onMouseEnter={enterEvent} target={tblank} onMouseLeave={exitEvent} >
           {ButtonText}
         </a>
         <Overlay target={target.current} show={show} placement="top">
