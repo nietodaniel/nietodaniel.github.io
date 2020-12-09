@@ -1,11 +1,11 @@
 import React from 'react';
 import SideVerticalPanel from '../../components/panels/SideVerticalPanel';
-import Education from '../../pageparts/cv/Education';
+import References from '../../pageparts/cv/References';
 import { withTranslation } from 'react-i18next';
 import TX from '../../localization/TX';
 import ContactSnippet from '../../pageparts/contact/ContactSnippet';
 
-const education = ({t,screenType }) => { 
+const references = ({t,screenType }) => { 
   const tCV = (word) => TX(t,word,"cv")
   const tMain = (word) => TX(t,word,"main")
 
@@ -13,7 +13,7 @@ const education = ({t,screenType }) => {
   const rightContent = ContactSnippet(screenType,tCV,tMain,buttonClassName)
 
   const leftContent = <>
-    {Education(tCV)}
+    {References(tCV)}
   </>
 
   return (
@@ -23,4 +23,4 @@ const education = ({t,screenType }) => {
   )
 }
 
-export default withTranslation()(education);
+export default withTranslation()(references);

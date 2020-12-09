@@ -8,7 +8,10 @@ const Skills = (tCV) => {
         "skills2",
         "skills3",
         "skills4",
-        "skills5"
+        "skills5",
+        "skills6",
+        "skills7",
+        "skills8"
       ]
       const skills = TransMultiPRM(tCV,"h2","subtitle","","pl-2 nospace",skillsArr)
 

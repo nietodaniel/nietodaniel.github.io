@@ -1,3 +1,4 @@
 {
-    "componentworks": "notfound: componente funciona!"
+    "notfound0": "Página no encontrada",
+    "notfound1": "Por favor verifica la redacción de la url o ve a la [página de inicio](/)"
 }

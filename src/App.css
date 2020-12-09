@@ -648,6 +648,14 @@ h4.subtitle{
   font-size: 9pt;
 }
 
+.btn.normaltextsize .small{
+  font-size: 8pt;
+  display:inline-block;
+  position:relative;
+  min-width:80px;
+  max-width:80px;
+}
+
 .fullheight{
   min-height: 90vh;
 }

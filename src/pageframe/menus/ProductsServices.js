@@ -14,7 +14,7 @@ const ProductsServices = (mainT,menuClassName,locale) => {
     const content = <>
       <DropdownNavLink  route={"/workprofile"} name={mainT("workprofile")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <hr className="mt-1 mb-1 m-0 p-0" style={{borderColor:'white'}} />
-      <DropdownNavLink  route={"/services"} name={mainT("myservices")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
+      <DropdownNavLink  route={"/skills"} name={mainT("myskills")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <hr className="mt-1 mb-1 m-0 p-0" style={{borderColor:'white'}} />
       <DropdownNavLink  route={"/software/free"} name={mainT("software") + " (" + mainT("freecontent") + ")"} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <DropdownNavLink  route={"/software"} name={mainT("software") + " (" + mainT("premium") + ")"} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 

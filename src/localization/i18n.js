@@ -13,7 +13,7 @@ import ENnotfound from '../locales/en/notfound.json'
 import ENprivacy from '../locales/en/privacy.json'
 import ENprojects from '../locales/en/projects.json'
 import ENrepositories from '../locales/en/repositories.json'
-import ENservices from '../locales/en/services.json'
+import ENskills from '../locales/en/skills.json'
 import ENsoftwareFree from '../locales/en/softwareFree.json'
 import ENsoftwarePremium from '../locales/en/softwarePremium.json'
 import ENstory from '../locales/en/story.json'
@@ -31,7 +31,7 @@ import ESnotfound from '../locales/es/notfound.json'
 import ESprivacy from '../locales/es/privacy.json'
 import ESprojects from '../locales/es/projects.json'
 import ESrepositories from '../locales/es/repositories.json'
-import ESservices from '../locales/es/services.json'
+import ESskills from '../locales/es/skills.json'
 import ESsoftwareFree from '../locales/es/softwareFree.json'
 import ESsoftwarePremium from '../locales/es/softwarePremium.json'
 import ESstory from '../locales/es/story.json'
@@ -40,6 +40,8 @@ import ESupcomingSoftware from '../locales/es/upcomingSoftware.json'
 import ESworkprofile from '../locales/es/workprofile.json'
 import ENcv from '../locales/en/cv.json'
 import EScv from '../locales/es/cv.json'
+import ENreferences from '../locales/en/references.json'
+import ESreferences from '../locales/es/references.json'
 
 
 // don't want to use this?
@@ -103,7 +105,7 @@ i18n
         privacy: ENprivacy,
         projects: ENprojects,
         repositories: ENrepositories,
-        services: ENservices,
+        skills: ENskills,
         softwareFree: ENsoftwareFree,
         softwarePremium: ENsoftwarePremium,
         story: ENstory,
@@ -111,7 +113,8 @@ i18n
         upcomingSoftware: ENupcomingSoftware,
         workprofile: ENworkprofile,
         main: ENmain,
-        cv: ENcv
+        cv: ENcv,
+        references: ENreferences
       },
       es: {
         cookies: EScookies,
@@ -124,7 +127,7 @@ i18n
         privacy: ESprivacy,
         projects: ESprojects,
         repositories: ESrepositories,
-        services: ESservices,
+        skills: ESskills,
         softwareFree: ESsoftwareFree,
         softwarePremium: ESsoftwarePremium,
         story: ESstory,
@@ -132,7 +135,8 @@ i18n
         upcomingSoftware: ESupcomingSoftware,
         workprofile: ESworkprofile,
         main: ESmain,
-        cv: EScv
+        cv: EScv,
+        references: ESreferences
       }
     },
   });

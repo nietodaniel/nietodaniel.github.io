@@ -17,6 +17,7 @@
 	"help": "Saludos Sr. Nieto, lo contactamos tras revisar su curriculum vitae.",
 	"moreaboutme": "Más sobre mi: ",
 	"mystory": "Mi historia",
+	"references" : "Referencias laborales",
 	"policies": "Políticas:",
 	"premium": "Premium",
 	"privacy": "Privacidad",
@@ -24,12 +25,12 @@
 	"projects": "Proyectos",
 	"repositories": "Repositorios",
 	"rights": "@Daniel Nieto 2020. Todos los derechos reservados",
-	"myservices": "Mis servicios",
+	"myskills": "Mis habilidades",
 	"software": "Software & Apps",
 	"terms": "Términos y Condiciones",
 	"upcomingapps": "Próximas Apps",
 	"workprofile": "Perfil laboral",
-	"p_s": "Productos\/Servicios",
+	"p_s": "Portafolio",
 	"cv": "Curriculum Vitae",
 	"viewcv": "Ver curriculum vitae completo"
 }

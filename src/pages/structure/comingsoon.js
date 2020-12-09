@@ -1,14 +1,15 @@
 import React from 'react';
 import NormalPanel from '../../components/panels/NormalPanel';
-import NotFoundPP from '../../pageparts/structure/NotFoundPP';
+import ComingSoonPP from '../../pageparts/structure/ComingSoonPP';
 import { withTranslation } from 'react-i18next';
 import TX from '../../localization/TX';
+//import ContactSnippet from '../../pageparts/contact/ContactSnippet';
 
-const notfound = ({t,screenType }) => { 
-  const tNF = (word) => TX(t,word,"notfound")
+const comingsoon = ({t,screenType }) => { 
+  const tNF = (word) => TX(t,word,"main")
 
   const leftContent = <>
-    {NotFoundPP(tNF)}
+    {ComingSoonPP(tNF)}
   </>
 
   return (
@@ -18,4 +19,4 @@ const notfound = ({t,screenType }) => {
   )
 }
 
-export default withTranslation()(notfound);
+export default withTranslation()(comingsoon);
