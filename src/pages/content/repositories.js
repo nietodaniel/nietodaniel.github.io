@@ -1,10 +1,24 @@
 import React from 'react';
+import SideVerticalPanel from '../../components/panels/SideVerticalPanel';
+import Repositories from '../../pageparts/cv/Repositories';
 import { withTranslation } from 'react-i18next';
+import TX from '../../localization/TX';
+import ContactSnippet from '../../pageparts/contact/ContactSnippet';
 
 const repositories = ({t,screenType }) => { 
+  const tCV = (word) => TX(t,word,"cv")
+  const tMain = (word) => TX(t,word,"main")
+
+  const buttonClassName = "btn normaltextsize AppbackgroundcolorB menubutton btnWithColor btn-outline-dark pt-1 pb-1 pl-4 pr-4"
+  const rightContent = ContactSnippet(screenType,tCV,tMain,buttonClassName)
+
+  const leftContent = <>
+    {Repositories(tCV)}
+  </>
+
   return (
-    <div>
-        {t("componentworks")}
+    <div className="normaltextsize">
+        {SideVerticalPanel (screenType,leftContent,rightContent,false)}
     </div>
   )
 }
