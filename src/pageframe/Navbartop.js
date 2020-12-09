@@ -47,7 +47,7 @@ class NavbarTop extends React.Component {
           style={{ minHeight: '24px' }}
         >
           <div className="container-fluid text-center m-0 p-0">
-            <div className="nicedarkbluebackground row text-center  small align-middle p-0 m-0  w-100">
+            <div className="nicedarkbluebackground row w-100 text-center  small align-middle p-0 m-0  w-100">
               {preZone}
               <div className={"col-"+lowerMenusWidth+" text-center  m-0 p-0 d-inline"} style={{ minHeight: '24px' }}>
                 {ExperienceMenu(this.props.t,menuClassName,this.props.locale)}

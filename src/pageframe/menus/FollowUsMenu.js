@@ -26,7 +26,7 @@ const FollowUsMenu = (t, screenType) => {
   if (screenType === 'miniV') {
     content = (
       <>
-        <span className="d-table-row small">{title}</span>
+        <span className="d-table-row w-100 small">{title}</span>
         <span className="d-table-row">{icons}</span>
       </>
     );

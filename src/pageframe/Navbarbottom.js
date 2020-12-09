@@ -72,7 +72,7 @@ class NavbarBottom extends React.Component {
           style={{ minHeight: '20px' }}
         >
           <div className="container-fluid text-center m-0 pl-2 pr-2">
-            <div className="row text-center  small align-middle p-0 m-0  w-100">
+            <div className="row w-100 text-center  small align-middle p-0 m-0  w-100">
               {content}
             </div>
           </div>

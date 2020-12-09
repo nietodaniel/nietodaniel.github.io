@@ -12,10 +12,10 @@ const SideVerticalPanel = (screenType,leftContent,rightContent) => {
 
     if (screenType === "normal" ) {
     content =  <>
-        <div className={"p-0 col-6"}>
+        <div className={"p-0 offset-1 col-6"}>
             <span>{leftContent}</span>
         </div>
-        <div className={"p-0 col-6"}>
+        <div className={"p-0 col-4"}>
             <span>{rightContent}</span>
         </div>
     </>
@@ -45,7 +45,7 @@ const SideVerticalPanel = (screenType,leftContent,rightContent) => {
 
     return (
         <div className={containerClass}>
-            <div className="row m-0 p-0">
+            <div className="row w-100 m-0 p-0">
                 {content}
             </div>
         </div>

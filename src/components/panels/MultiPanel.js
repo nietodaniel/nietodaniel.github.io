@@ -24,7 +24,7 @@ const MultiPanel = (panelsPerRow,cellClassArray,contentArray) => {
         rowContent = <><>{rowContent}</><>{panelRes}</></>
     }
 
-    const RenderRow = (rowContentChunk,rowCellClassChunk) => {
+    const Renderrow w-100 = (rowContentChunk,rowCellClassChunk) => {
         rowContent=""
         rowContentChunk.map((rowArrayItem,index) =>  panelItem(rowArrayItem,rowCellClassChunk[index]));
         return(
