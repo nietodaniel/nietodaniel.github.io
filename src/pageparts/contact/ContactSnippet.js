@@ -2,12 +2,15 @@ import React from 'react'
 import LinkWithInfo from '../../components/buttons/LinkWithInfo'
 import MainDropDownMenu from '../../components/menus/MainDropDownMenu';
 import ContactMenuOptions from '../../pageframe/menus/ContactMenuOptions';
+import GetLocaleFromHead from '../../components/modules/GetLocaleFromHead';
 
 const ContactSnippet = (screenType,tCV,tMain,buttonClassName,hideCV,hideSkills) => {
 
-    let cvLink = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("viewcv")}</span>,tMain("cv_info"),"span","/cv") 
-    let mySkills = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("myskills")}</span>,tMain("skills_info"),"span","/skills") 
-    let downloadpdf = LinkWithInfo(buttonClassName + " dpdf",<span className="small p-1">{tMain("downloadpdf")}</span>,tMain("download_info"),"span",window.location.origin + "/docs/CV - Daniel Nieto.pdf",true) 
+    const locale = GetLocaleFromHead()
+
+    let cvLink = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("viewcv")}</span>,tMain("cv_info"),"span","/"+locale+"/cv") 
+    let mySkills = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("myskills")}</span>,tMain("skills_info"),"span","/"+locale+"/skills") 
+    let downloadpdf = LinkWithInfo(buttonClassName + " dpdf",<span className="small p-1">{tMain("downloadpdf")}</span>,tMain("download_info"),"span","/"+locale+"/docs/CV - Daniel Nieto.pdf",true) 
     const menuClassName = "allowmouse nav-item dropdown m-auto pr-2";
     const buttonTextClassName = "small p-0";
     const contentClassName = "dropdown-menu"
