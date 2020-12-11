@@ -14,13 +14,14 @@ import MainContainer from './MainContainer';
 import HtmlHeadManager from '../localization/HtmlHeadManager'
 import {getCurrentScreenType} from '../components/modules/ScreenType'
 
-class PageFrame extends React.Component {
 
+class PageFrame extends React.Component {
+  
   constructor(props) {
     super(props);
     const screenType = getCurrentScreenType()
     this.state = {
-      screenType: screenType,
+      screenType: screenType
     };
   }
 
@@ -32,7 +33,7 @@ class PageFrame extends React.Component {
           // `this` is now pointing to `window`, not the component. So use `self`.
           const currentscreenType = getCurrentScreenType();
           this.setState({
-            screenType: currentscreenType,
+            screenType: currentscreenType
           });
         },
         true
@@ -41,10 +42,8 @@ class PageFrame extends React.Component {
   }
 
   render() { 
-    let redirectIfNecesarry=""
-    if(this.props.faultyLocale===true){
-      redirectIfNecesarry=<Redirect to={'/' + this.props.locale + '/' + this.props.path} />
-    }
+    let redirectIfNecesarry = "";
+    
     return (
       <>
         <HtmlHeadManager locale={this.props.locale} AllowReRender={AllowReRenderHelmet} />
@@ -64,7 +63,7 @@ class PageFrame extends React.Component {
                 AllowReRender={AllowReRenderContent}
                 locale={this.props.locale}
               />
-            <Redirect to={'/' + this.props.locale} />
+
           </Switch>
         </div>
         <NavbarBottom

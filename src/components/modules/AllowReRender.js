@@ -19,6 +19,8 @@ export const AllowReRenderBottomNavBar = (nextProps, currentProps) => {
 export const AllowReRenderContent = (nextProps, currentProps) => {
   if(nextProps.path!==currentProps.path)
     return true;
+  if(nextProps.locale!==currentProps.locale)
+    return true;
   if(currentProps.screenType!==nextProps.screenType)
     return true;
   return false; 

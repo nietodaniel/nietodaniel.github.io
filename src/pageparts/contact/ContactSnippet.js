@@ -8,9 +8,9 @@ const ContactSnippet = (screenType,tCV,tMain,buttonClassName,hideCV,hideSkills) 
 
     const locale = GetLocaleFromHead()
 
-    let cvLink = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("viewcv")}</span>,tMain("cv_info"),"span","/"+locale+"/cv") 
-    let mySkills = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("myskills")}</span>,tMain("skills_info"),"span","/"+locale+"/skills") 
-    let downloadpdf = LinkWithInfo(buttonClassName + " dpdf",<span className="small p-1">{tMain("downloadpdf")}</span>,tMain("download_info"),"span","/"+locale+"/docs/CV - Daniel Nieto.pdf",true) 
+    let cvLink = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("viewcv")}</span>,tMain("cv_info"),"span","/?/"+locale+"/cv/") 
+    let mySkills = LinkWithInfo(buttonClassName,<span className="small p-1">{tMain("myskills")}</span>,tMain("skills_info"),"span","/?/"+locale+"/skills/") 
+    let downloadpdf = LinkWithInfo(buttonClassName + " dpdf",<span className="small p-1">{tMain("downloadpdf")}</span>,tMain("download_info"),"span","/docs/CV - Daniel Nieto.pdf",true) 
     const menuClassName = "allowmouse nav-item dropdown m-auto pr-2";
     const buttonTextClassName = "small p-0";
     const contentClassName = "dropdown-menu"

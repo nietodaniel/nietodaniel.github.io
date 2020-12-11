@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { I18nextProvider } from "react-i18next";
 import i18n from "./localization/i18n";
 import { BrowserRouter } from 'react-router-dom';
-import history from './routers/history'
 
 const App = () =>{
     const helmetContext = {};
@@ -14,7 +13,7 @@ const App = () =>{
     return (
       <I18nextProvider>
         <HelmetProvider context={helmetContext}>
-          <BrowserRouter  history={history}>
+          <BrowserRouter  basename="/?/" >
             <AppRouter i18n={i18n} />
           </BrowserRouter>
         </HelmetProvider>

@@ -1,37 +1,33 @@
 const GetURLParts = (path) => {
-  if (path.charAt(path.length - 1) === '/')
-    path = path.substring(0, path.length - 1);
-  if (path.charAt(path.length - 1) === '#')
-    path = path.substring(0, path.length - 1);
-  if (path.charAt(0) === '/')
-    path = path.substring(1)
-  const parts = path.split('/');
-  return parts
+  let parts = path.split('/');
+  const noEmpty = parts.filter(function(e) { return e !== '' })
+  const noQ = noEmpty.filter(function(e) { return e !== '?' })
+  const clean = noQ.filter(function(e) { return e !== '#' })
+  return clean
 }
 
-const GetLocaleAndPath = (i18n,fullpath) => {
-  let locale = i18n.language || window.localStorage.i18nextLng
-  let parts = GetURLParts(fullpath)
-  let tmpLocale =  parts.shift();
+const GetLocaleAndPath = (i18n,locationObj) => {
+  const pathname = locationObj.pathname
+  const search = locationObj.search+locationObj.hash
+  const relativepath = pathname+search
+  let oldlocale = i18n.language || window.localStorage.i18nextLng
+  let parts = GetURLParts(relativepath)
+  console.log("oriparts",parts)
+  let locale =  parts.shift();
   let faultyLocale=false
-  if (tmpLocale !== 'en' && tmpLocale !== 'es'){
-    parts = [tmpLocale].concat(parts)
-    tmpLocale="en"
-    faultyLocale=true
+  if (locale !== 'en' && locale !== 'es'){
+    console.error("ERROR: locale is... "+locale+" changing to... "+oldlocale)
+    locale=oldlocale
   }
-  if (locale !== 'en' && locale !== 'es') {
-    if(parts.length>0){   
-      locale=tmpLocale
-    }else{
-      locale='en'
-    }
+  const partstwo = ["","?",locale].concat(parts).concat("")
+  console.log("newparts",partstwo)
+  const newpath = partstwo.join("/")
+  if(newpath!==relativepath){
+    console.error("Modifying path: "+relativepath+" changing to... "+newpath)
+    window.history.replaceState(null, {}, newpath)
   }
-  let path = ""
-  path = parts.join("/")
-  if(faultyLocale===true){
-    window.history.replaceState(null, {}, '/'+locale+"/"+path)
-  }
-  return {locale:locale,path:path,faultyLocale:faultyLocale}
+  const path = [""].concat(parts).concat("")
+  return {locale:locale,path:path.join("/"),faultyLocale:faultyLocale}
 }
 
 export default GetLocaleAndPath

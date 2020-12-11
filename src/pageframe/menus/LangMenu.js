@@ -5,7 +5,7 @@ import {Dropdown} from 'react-bootstrap'
 const LangMenu = (menuClassName,i18n,locale,path) => {
 
     const changeLanguage = (lng) => {
-      window.history.replaceState(null, {}, '/'+lng+"/"+path)
+      window.history.replaceState(null, {}, '/?/'+lng+"/"+path)
       i18n.changeLanguage(lng);
     };
  
