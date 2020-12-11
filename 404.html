@@ -31,8 +31,8 @@
         l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
-      console.log("Redirected in 404.html: Before, after")
-      console.log(originalPath+"\n"+replacement)
+      console.log("404 ori: "+originalPath)
+      console.log("404 after: "+replacement)
       l.replace(
         replacement
       );
