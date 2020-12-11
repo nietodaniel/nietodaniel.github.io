@@ -25,19 +25,16 @@
       var pathSegmentsToKeep = 0;
 
       var l = window.location;
+      const originalPath = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +l.pathname
       const replacement = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
         l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
-      console.log("newurl")
-      console.log(replacement)
+      console.log("Redirected in 404.html: Before, after")
+      console.log(originalPath,replacement)
       l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        replacement
       );
 
     </script>
