@@ -10,7 +10,7 @@ const AppRouter = ({i18n}) => {
     return (
       <div id="main-container">
           <PageFrame
-            i18n={i18n} locale={locale} path={path} faultyLocale={faultyLocale}
+            i18n={i18n} locale={locale} faultyLocale={faultyLocale}
           />
       </div>
     );

@@ -50,7 +50,6 @@ class PageFrame extends React.Component {
         <NavbarTop
           locale={this.props.locale}
           i18n={this.props.i18n}
-          path={this.props.path}
           screenType={this.state.screenType}
           AllowReRender={AllowReRenderTopNavBar}
         />
