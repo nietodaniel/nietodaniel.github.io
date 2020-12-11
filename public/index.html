@@ -37,6 +37,7 @@
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
       (function(l) {
+        console.log("pathname: "+l.pathname)
         const originalPath = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +l.pathname + l.search + l.hash
         console.log("index-ori: "+originalPath)
         if (l.search) {

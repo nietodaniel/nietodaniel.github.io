@@ -63,7 +63,7 @@ class PageFrame extends React.Component {
                 AllowReRender={AllowReRenderContent}
                 locale={this.props.locale}
               />
-
+              <Redirect to={'/' + this.props.locale} />
           </Switch>
         </div>
         <NavbarBottom

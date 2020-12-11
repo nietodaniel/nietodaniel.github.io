@@ -19,14 +19,14 @@ const GetLocaleAndPath = (i18n,locationObj) => {
     console.error("ERROR: locale is... "+locale+" changing to... "+oldlocale)
     locale=oldlocale
   }
-  const partstwo = ["","?",locale].concat(parts).concat("")
+  const partstwo = ["","?",locale].concat(parts)
   console.log("newparts",partstwo)
   const newpath = partstwo.join("/")
   if(newpath!==relativepath){
     console.error("Modifying path: "+relativepath+" changing to... "+newpath)
     window.history.replaceState(null, {}, newpath)
   }
-  const path = [""].concat(parts).concat("")
+  const path = [""].concat(parts)
   return {locale:locale,path:path.join("/"),faultyLocale:faultyLocale}
 }
 
