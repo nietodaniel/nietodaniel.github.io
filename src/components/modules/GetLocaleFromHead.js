@@ -1,7 +1,10 @@
+
+
 const GetLocaleFromHead = () => {
+    const locale =window.localStorage.i18nextLng
 
     return (
-        document.documentElement.lang
+        locale
     )
 }
 

@@ -7,12 +7,12 @@ const GetURLParts = (path) => {
 }
 
 const GetLocaleAndPath = (i18n,locationObj) => {
+  console.log("Original path: ",locationObj)
   const pathname = locationObj.pathname
   const search = locationObj.search+locationObj.hash
   const relativepath = pathname+search
   let oldlocale = i18n.language || window.localStorage.i18nextLng
   let parts = GetURLParts(relativepath)
-  console.log("oriparts",parts)
   let locale =  parts.shift();
   let faultyLocale=false
   if (locale !== 'en' && locale !== 'es'){
@@ -20,14 +20,13 @@ const GetLocaleAndPath = (i18n,locationObj) => {
     locale=oldlocale
   }
   const partstwo = ["","?",locale].concat(parts)
-  console.log("newparts",partstwo)
   const newpath = partstwo.join("/")
+
   if(newpath!==relativepath){
     console.error("Modifying path: "+relativepath+" changing to... "+newpath)
     window.history.replaceState(null, {}, newpath)
   }
-  const path = [""].concat(parts)
-  return {locale:locale,path:path.join("/"),faultyLocale:faultyLocale}
+  return {locale:locale,path:newpath,faultyLocale:faultyLocale}
 }
 
 export default GetLocaleAndPath
