@@ -32,7 +32,7 @@
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       console.log("Redirected in 404.html: Before, after")
-      console.log(originalPath,replacement)
+      console.log(originalPath+"\n"+replacement)
       l.replace(
         replacement
       );
