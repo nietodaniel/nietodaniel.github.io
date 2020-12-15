@@ -2,7 +2,7 @@ import PRM from '../textProcessor/PRM'
 
 export const CelSolid = () => {
 
-  const cellphone = "573232350963"
+  const cellphone = "573219752073"
 
   return (
     cellphone
@@ -11,7 +11,7 @@ export const CelSolid = () => {
 
 export const CelVisual = () => {
 
-  const cellphone = "+57 323 2350963"
+  const cellphone = "+57 321 9752073"
 
   return (
     cellphone
@@ -20,7 +20,7 @@ export const CelVisual = () => {
 
 export const CelSolidPlus = () => {
 
-  const cellphone = "+573232350963"
+  const cellphone = "+573219752073"
 
   return (
     cellphone
