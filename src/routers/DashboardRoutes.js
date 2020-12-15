@@ -30,9 +30,9 @@ class DashboardRoutes extends React.Component {
     return (
       <>
         <Switch>
-          <Route exact path="/:lang/software/upcoming" render={() => (<ComingSoon screenType={this.props.screenType} />)}  />
-          <Route exact path="/:lang/software/free" render={() => (<ComingSoon screenType={this.props.screenType} />)}  />
-          <Route exact path="/:lang/software" render={() => (<ComingSoon screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/software/upcoming" render={() => (<UpcomingSoftware screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/software/free" render={() => (<FreeSoftware screenType={this.props.screenType} />)}  />
+          <Route exact path="/:lang/software" render={() => (<PremiumSoftware screenType={this.props.screenType} />)}  />
           <Route exact path="/:lang/datascience/packages" render={() => (<DataSciencePackages screenType={this.props.screenType} />)}  />
           <Route exact path="/:lang/workprofile" render={() => (<WorkProfile screenType={this.props.screenType} />)}  />
           <Route exact path="/:lang/skills" render={() => (<Skills screenType={this.props.screenType} />)}  />
