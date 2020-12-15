@@ -3,6 +3,6 @@
 	"content1": "**Nature Engine**",
 	"content2": "Nature Engine es un proyecto al servicio de la sociedad, que busca desarrollar simuladores potentes, eficientes y portables, según las necesidades y requerimientos de los investigadores en teoría evolutiva, utilizando las últimas tecnologías, como Unity y Unreal Engine, y aplicando metodologías más eficientes y de mayor resolución que la bioestadística tradicional, como Sistemas MultiAgentes",
 	"content3": " ",
-	"content4": "**PICO Searcher** (Built for [BIREME\/OPS\/PAHO](https:\/\/www.paho.org\/en\/bireme))",
+	"content4": "**PICO Searcher** (Construida para [BIREME\/OPS\/PAHO](https:\/\/www.paho.org\/en\/bireme))",
 	"content5": "App que facilita la búsqueda de artículos científicos en la base de datos científica Lilacs \/ BIREME (Una rama de la Organización Mundial de la Salud - OMS). Implementó la metodología PICOS para la construcción de revisiones sistemáticas. La aplicación ya está construida y terminada ([Ver repositorio](https:\/\/github.com\/bireme\/PICO-BackEnd)) pero BIREME aún no la ha desplegado para el público"
 }
