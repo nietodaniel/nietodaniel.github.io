@@ -29,7 +29,7 @@ export const CelSolidPlus = () => {
 
 export const Email = () => {
 
-  const email = "nieto.daniel221@gmail.com"
+  const email = "d-nieto@javeriana.edu.co"
 
   return (
     email

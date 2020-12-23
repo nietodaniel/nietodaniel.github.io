@@ -15,7 +15,7 @@ const ContactMenuOptions = (mainT) => {
   </>
 
   const emailButtonContent= <>
-    <i className="las la-envelope la-lg" style={{color: '#ffffff'}}></i ><span className="small  m-1">{"nieto.daniel221@gmail.com"}</span>
+    <i className="las la-envelope la-lg" style={{color: '#ffffff'}}></i ><span className="small  m-1">{"d-nieto@javeriana.edu.co"}</span>
   </>
   
   const wappURL = "https://api.whatsapp.com/send?phone=" + CelSolid() + "&text=" + mainT("help")
