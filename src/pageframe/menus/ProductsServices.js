@@ -19,6 +19,7 @@ const ProductsServices = (mainT,menuClassName,locale) => {
       <DropdownNavLink  route={"/software/free"} name={mainT("software") + " (" + mainT("freecontent") + ")"} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <DropdownNavLink  route={"/software"} name={mainT("software") + " (" + mainT("premium") + ")"} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
       <DropdownNavLink  route={"/datascience/packages"} name={mainT("datapackages")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
+      <hr className="mt-1 mb-1 m-0 p-0" style={{borderColor:'white'}} />
       <DropdownNavLink  route={"/repositories"} name={mainT("repositories")} linkTextClassName={linkTextClassName} activeClassName={"active"} NavClassName={NavClassName} locale={locale} /> 
     </>
 
